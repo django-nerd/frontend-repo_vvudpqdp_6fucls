@@ -117,8 +117,8 @@ const Navbar = ({ currentUser, setCurrentUser, onScrollToBooking }) => {
       </nav>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" role="dialog" aria-modal>
-          <div className="w-full max-w-md rounded-xl bg-white shadow-xl overflow-hidden">
+        <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-4" role="dialog" aria-modal>
+          <div className="w-full sm:max-w-lg max-w-md rounded-xl bg-white shadow-xl overflow-hidden">
             <div className="flex">
               <button
                 className={`flex-1 py-3 font-medium ${mode === 'login' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-slate-500'}`}
@@ -134,8 +134,8 @@ const Navbar = ({ currentUser, setCurrentUser, onScrollToBooking }) => {
               </button>
             </div>
             <div className="p-6 space-y-4">
-              {error && <div className="text-red-600 text-sm">{error}</div>}
-              {success && <div className="text-green-600 text-sm">{success}</div>}
+              {error && <div className="text-red-600 text-sm text-center">{error}</div>}
+              {success && <div className="text-green-600 text-sm text-center">{success}</div>}
               {mode === 'register' ? (
                 <form onSubmit={handleRegister} className="space-y-3">
                   <div>
